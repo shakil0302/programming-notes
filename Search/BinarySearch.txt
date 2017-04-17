@@ -1,0 +1,42 @@
+Problem:
+Given some data we have to find a value in the range [lo, hi].
+If we can design a predicate which evaluates to true/false, in the
+range [lo, ans] or [ans, hi] and evaluates to opposite value
+in the remaining range, then, binary search can be applied.
+
+Discrete binary search: [lo, hi] elements are integer.
+1. Find the maximum value satisfying the predicate.
+while(lo < hi){
+	mid = lo+(hi-lo+1)/2;
+	if(predicate(mid))
+		lo = mid;
+	else
+		hi = mid-1;
+}
+cout << lo << endl;
+
+http://codeforces.com/problemset/problem/779/D
+http://codeforces.com/contest/779/submission/25045053
+
+2. Find the minimum value satisfying the predicate.
+while(lo < hi){
+	mid = lo+(hi-lo)/2; //see the difference
+	if(predicate(mid))
+		hi = mid;
+	else
+		lo = mid+1;
+}
+cout << hi << endl;
+http://codeforces.com/contest/474/problem/B
+http://codeforces.com/contest/474/submission/23670645
+
+Continuous binary search: [lo, hi] elements are floating point value
+N = 1000; //make N big enough so that (hi-lo)/2^N is less than the eps you want
+while(N--){
+	mid = (lo+hi)/2;
+	if(predicate(mid))
+		lo = mid;
+	else
+		hi = mid;
+}
+cout << lo << endl;

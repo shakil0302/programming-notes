@@ -1,0 +1,29 @@
+Meet in the middle is a technique. Using this we can reduce the
+runtime by a considerable ammount.
+
+Here is some classic problem that illustrates the situation.
+
+1. Subset SUM:
+Given 40 numbers, find the number of subset whos sum is between
+A and B.
+
+If the range A and B was small then we could use the 0-1 knapsack
+to solve it. Also, Here N = 40 make it difficult to apply bruteforce.
+This is a situation where meet in the middle can help us.
+Lets divide the number in two equal sets. Now we can try brute force to find
+all subset sums for these smaller set. Then we can use binary search to find
+the answer from there.
+
+Problem: http://www.spoj.com/problems/SUBSUMS
+Submission: http://www.spoj.com/files/src/19230239/
+
+2. Six tuple
+Given 100 numbers, find how many six tuple (a, b, c, d, e, f) exists
+satifying the relation: (a*b+c)/d-e = f
+
+The most obvius solution takes O(N^6) time. We can do better if we notice,
+a*b+c = d*(e+f) where d != 0 is another way to write the same problem.
+Now we can find the anwer in O(N^3).
+
+Problem: http://www.spoj.com/problems/ABCDEF/
+Submission: http://www.spoj.com/files/src/19230411/

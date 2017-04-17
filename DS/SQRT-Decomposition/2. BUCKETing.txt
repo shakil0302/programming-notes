@@ -1,0 +1,16 @@
+Given an array 'arr' of size 'N', you have to perform Q query.
+There can be updates, or calculating values for some functions.
+The queries may be given in range [L, R].
+
+This can be solve if for all calculation query, [L, R], the answer can
+be calculating very easily if we know the answer for,
+[L, R1], [L2, R2], ..., [Lk, Rk], [Lk+1, R].
+
+First let, BS = sqrt(N);
+Then we separate the [1, n] segment into TB blocks of size BS(except
+the last block). This way total number of blocks will be at most sqrt(N) too.
+
+Then we can answer all the queries in O(Q sqrt N) times.
+
+http://codeforces.com/contest/13/problem/E
+http://codeforces.com/contest/13/submission/25063325
