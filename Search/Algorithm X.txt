@@ -1,0 +1,9 @@
+Algorithm X is used to solve the exact cover problem.
+It is an NP-complete, still using Algorithm X we can solve
+it very efficiently.
+
+Exact cover problem
+Let there is a set X and another set Y which is a subset of
+power(X). Now an exact cover of X is a subset Z of Y, such that,
+The union of all sets that belong to Z is X. and all subset of Z
+is pairwise disjoint.
