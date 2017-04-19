@@ -113,3 +113,20 @@ X = {
 X = {}
 17. There are no more constrints to satisfy. We are done.
 18. The exact cover is thus B, D, F
+
+Applications
+Any problem that can be modelled as exact cover can be solved using X.
+Sudoku is an great example.
+
+In a 9x9 sudoku there are 81 cells which can be filled with value from 1 to 9
+So, we get 9*9*9 options. Now in sudoku there are few cons thats also needs to
+be satisfied.
+1. In every row there must be all the number from 1 to 9 present.
+	There are 9 rows, so, 81 row constraints.
+2. Similarly there are 81 column and 81 box constraints.
+3. No cell can be empty, thus additional 81 constraints.(Is it needed?)
+Now, the task remains is we need to build X and Y from it and run the exact cover
+cover and reconsturct a solution from the solution's options list.
+
+Problem link: http://www.lightoj.com/volume_showproblem.php?problem=1397
+Solution: See another repository named under Algorithm X
