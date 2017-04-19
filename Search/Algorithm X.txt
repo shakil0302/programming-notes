@@ -7,3 +7,109 @@ Let there is a set X and another set Y which is a subset of
 power(X). Now an exact cover of X is a subset Z of Y, such that,
 The union of all sets that belong to Z is X. and all subset of Z
 is pairwise disjoint.
+
+Now Knuth suggests an implementation dancing links which can solve
+the problem. But here we will discuss a different approach.
+
+Now we introduce some terminology which may help us to remember the
+concepts better.
+
+Let X be a set of constraints to be satisfied. Then, we can think each
+element of Y is an option which satisfies some of the constraints of X.
+Now to be an exact cover, we can't choose two element which satisfy at least
+one common constraint.
+
+So, lets define the data structure for our problem.
+//X is a set of constraints and a contraint can be satified by choosing some
+//options. So, we define X as a map from constraints to options
+X = {
+		1: {'A', 'B'},
+		2: {'E', 'F'},
+		3: {'D', 'E'},
+		4: {'A', 'B', 'C'},
+		5: {'C', 'D'},
+		6: {'D', 'E'},
+		7: {'A', 'C', 'E', 'F'}
+	}
+//Y is the list of options and a option can satisfy some contriants.
+//So we define Y as a map from option to constriants
+//in out algorithm Y doesn't get changed. So, we want very fast
+//lookup only. No addition or deletion.
+Y = {
+		'A': [1, 4, 7],
+		'B': [1, 4],
+		'C': [4, 5, 7],
+		'D': [3, 5, 6],
+		'E': [2, 3, 6, 7],
+		'F': [2, 7]
+	}
+Now, the algorithm
+1. Choose a constraint to be satisfied. As every contriants must
+be satisfied at some points, we choose the one which has least options.
+2. If there is no constraints to be satisfied, we found a solution. Backtrack
+3. For all options which satisfy the selected constraint as op,
+4.	Select op, It will satisfy some other constriants too. Remove any
+	alternative candidate from the the array X,
+5.  Goto 1
+6.  Now unselect op rewind any changes made to X in order to select op
+7.  Try with Next one.
+
+Here,
+Y = {
+		'A': [1, 4, 7],
+		'B': [1, 4],
+		'C': [4, 5, 7],
+		'D': [3, 5, 6],
+		'E': [2, 3, 6, 7],
+		'F': [2, 7]
+	}
+and
+X = {
+		1: {'A', 'B'},
+		2: {'E', 'F'},
+		3: {'D', 'E'},
+		4: {'A', 'B', 'C'},
+		5: {'C', 'D'},
+		6: {'D', 'E'},
+		7: {'A', 'C', 'E', 'F'}
+	}
+1. Now, From X select 1 as it has fewest options to be satisfied.
+2. We can see that we can select option A to satisfy 1, another posibility is
+to select B.
+3. From Y we see A also satisfy constraint 1, 4, 7
+4. This set is also satisfied by A, B, C, E, F
+5. From Y we can see that A needs to be removed from 1, 4, 7
+	B needs to be removed from 1, 4, C needs to be removed from
+	4, 5, 7, and so on
+6. After the removal X becomes
+X = {
+		2: {},
+		3: {'D'},
+		5: {'D'},
+		6: {'D'},
+	}
+7. Now, the smallest one is 2 but is cant be satisfied at all.
+8. We can't select A in the last level, but, there was B, so, we
+	reconstruct X and try with B
+9. B also satisfies 1 and 4
+10. 1 and 4 also satisfied by A, B, C
+11. After removal of A, B, and C, we get
+X = {
+		2: {'E', 'F'},
+		3: {'D', 'E'},
+		5: {'D'},
+		6: {'D', 'E'},
+		7: {'E', 'F'}
+	}
+12. Now, we need to select 5, thus D
+13. D satisfies 3, 5, 6 which are satisfied by D, E
+14. After removing D and E
+X = {
+		2: {'F'},
+		7: {'F'}
+	}
+15. Now select 2 hence F, which satisfies 2 and 7, which is satisfied by F
+16. Now after removing F we get
+X = {}
+17. There are no more constrints to satisfy. We are done.
+18. The exact cover is thus B, D, F
