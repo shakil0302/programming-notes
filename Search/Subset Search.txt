@@ -1,0 +1,45 @@
+Given an array of integers a[], find a subset of a[] which sum is closest to N.
+If N is not very high, then we can find this using O(nN) time and O(n2N) memory.
+For now let N can at 10^9. Then the best we can do is to generate all the subset and
+take the one which is closest to N.
+
+As there are 2^n subset, we can't do this for big n. For now assume n is 15.
+
+Now, how can we represent a subset? The trick is to use bitmasking. This way we can
+represent all the subset of size n by using the integer from 0 to 2^n-1.
+
+Details:
+We count from right to left, the rightmost bit will denote the existance of 0th item
+in the current subset. The next one will denote the existance of the 1th item.
+bit 0 means the item doesn't exist and 1 means it exists.
+
+let, a = [1, 6, 5, 4, 8, 6] then
+010110 denote the subset [6, 4, 8].
+001011 denote the subset [5, 8, 6].
+
+Now, lets see some bit tricks which will be useful later,
+1. Test if jth item exist in mask, (mask&(1<<j)) != 0
+2. How many item in mask, __builtin_popcount(mask)
+3. Add jth item in mask, mask|=(1<<j)
+4. Remove jth item from mask, mask&=~(1<<j)
+5. Find the highest indexed item that exists in mask, __builtin_ctz(mask)
+6. Iterate over all the subset of mask, which has one less item than mask,
+	lets define lowbit(i) as i&-i which finds the subset with only the highest index.
+	The idea is to generate all the single element subset of mask, and then removing
+	it will find us a subset mask - {only that element}.
+	
+	for j = mask; j; j -= lowbit(j)
+		ans = mask-lowbit(j);
+		// print ans
+
+		
+Solution of the problem:
+1. let sum[mask] denote the sum of the items of subset mask.
+2. sum[0] = 0, set it as current best;
+3. For i = 1 to 2^n-1
+4. 	sum[i] = sum[i-lowbit(i)]+a[__builtin_ctz(i)];
+5. 	if sum[i] is closer then the current best
+6.		update current best.
+
+Problem: https://uva.onlinejudge.org/external/6/624.pdf
+Solution: /src/uva624.cpp
