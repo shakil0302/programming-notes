@@ -20,3 +20,17 @@ lcp(0, 1) = 0 as the first character differs.
 
 Using these two tools, we can solved various string problem which we will discuss
 shortly.
+
+The naive approach of building suffix array takes O(n^2 log n) time. And the naive approach
+of calculating lcp takes O(n) time. But using Sparse Table, we can do the building in O(n log n)
+and calculate the lcp in O(log n) time.
+
+The trick is to find an ordering relation for 2^0, 2^1, 2^2, ..., 2^log n length. This way, we can
+find which suffix is lexicographically smaller than others. Also, we can find the lcp from 
+this in O(log n) time.
+
+Problem: http://lightoj.com/volume_showproblem.php?problem=1428
+Submission: http://lightoj.com/volume_showcode.php?sub_id=957735
+
+Using Suffix Array we can find many answer regarding the string. Just remember the property of
+sa and lcp. Here we will survery most basic ones.
