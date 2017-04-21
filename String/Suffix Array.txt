@@ -1,0 +1,22 @@
+Suffix Array
+Suffix array is a data structure for string. In this structure we
+build an array of integer sa[] which holds the starting position of all
+the suffixes of a particular string in lexicographically sorted order.
+It has a very remarkable property. if i < j < k, then, sa[i] and sa[j] will have
+at least equal match as sa[i] and sa[k] if not better match. Also it hold for
+sa[j] and sa[k]. Why it works? Remeber, it is lexicographically sorted.
+
+str = "ababa"
+sa = [4, 2, 0, 3, 1]
+
+Longest Common Prefix
+It is an procedure which takes two integer, i and j, which denotes the
+starting position of two suffixes. This computes the length of the longest matched
+string started from the first character.
+
+lcp(0, 2) = 3
+as 0 = ababa and 2 = aba and the longest match is aba
+lcp(0, 1) = 0 as the first character differs.
+
+Using these two tools, we can solved various string problem which we will discuss
+shortly.
