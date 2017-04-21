@@ -34,3 +34,18 @@ Submission: http://lightoj.com/volume_showcode.php?sub_id=957735
 
 Using Suffix Array we can find many answer regarding the string. Just remember the property of
 sa and lcp. Here we will survery most basic ones.
+
+1. Find the longest substring which exist at least two times.
+	We can caculate lcp for every consecutive entry in the sa. runtime: O(n log n)
+2. Find the number of occurances of the string B in A
+	Build sa for A, then find lower bound and upper bound for B in sa using strncmp.
+3. Find the longest substring of A which exists at least k times.
+	Calculate lcp for i and i+k-1. And take the max one. Why this works?
+4. Find the number of distinct substrings of A.
+	Build sa for A, for each entry, add the length of suffix, and remove the part which is overcounted.
+	Which is the lcp between the current and the previous entry.
+5. Find the longest common substring of string A and B.
+	Build sa for A#B, where # is a sepator that doesnt occur in neither A nor B. Now find the lcp of
+	two consecutive entry of sa, such that, taking one from A and other from B. Ensure it by inspecting
+	the length of the substrings. If you need three string, then use different sepator.
+6. There are too many other applications. Just make sure you understand the underlying concept.
