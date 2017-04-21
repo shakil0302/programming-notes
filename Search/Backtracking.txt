@@ -1,0 +1,53 @@
+In most of the solutions of the problems, we build the solution
+ste by step. Sometimes we do not know in advance whether a paricular
+choice will lead to a solution.
+
+In this case we will try every choice by turn and see where we can go
+from there. If a particular choice doesn't work, we try with the next one.
+
+Its better to discuss an concrete example.
+
+Prime Ring Problem:
+Given an integer n, we have to find all possible permuation of the numbers
+from 1 to n, such that two consecutive numbers sums to a prime. The summation
+of the first and last number will be prime also. Given that, the first one will
+always be 1.
+
+Solution:
+1. let solution[] be an resultant permutation.
+2. we can't use a number twice, so, we need to keep track whether a number
+	is already used or not. let used[] be an such array.
+3. the first number will be always one, so, set solution[0] = 1, used[1] = true
+4. backtrack(i) //i denotes we are deciding what we will put at ith position
+5.		if i == n, then check whether solution[n-1]+1 is a prime,
+					if true then print the result and  return
+6. 		for: j = 1 to n
+7.			if j is not already used and prime with the previous choice
+8.				solution[i] = j; //line 7 & 8 selects the number j
+9.				used[j] = true; 
+10.				backtrack(i+1); // now explore where we can go from there
+11.				used[j] = false; // we will try with the next choice,
+									so, deselect j, because it will be available
+									for the next position
+									
+The above process gives a demonstration of backtracking. It is a very
+powerful technique, because it can solve almost any problem. But its runtime
+is a bit higher. So, we can rarely use this. But Understanding the basics help
+us to learn advance topics like DP.
+
+An optimization note:
+We do not need to fill the position sequencially for all kind of backtracking.
+Sometimes filling the solution space in a certain order(other than the natural
+one) helps to reduce the runtime by a huge amount. The earlier we can discard a
+wrong solution, the better. and Less choice, less runtime!
+
+An important consideration is an sudoku solver. If we just fill cells, row by row,
+it will take huge amount of time, because we have many choices for each cell.
+But, if we fill the cell which has least amount of choices, then, we can get
+a better runtime.
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1397
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=878963
+
+Problem: http://uva.onlinejudge.org/external/5/524.pdf
+Submission: /src/uva524.cpp
