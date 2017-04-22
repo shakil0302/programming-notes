@@ -1,0 +1,26 @@
+Let f(x) be an unimodal function, then, ternary search can find the x for
+which f(x) is minimized or maximized.
+
+The graph of a unimodal function looks like,
+f(x) = <<<<<<<<<<<<>>>>>>>>>>>>>>>
+where < denotes the value is increasing and > denotes a decrease. Thus <> is the
+peak point.
+
+Let,
+lo = lowest_possible_value_of_x
+hi = highest_possible_value_of_x
+
+Then, let, lets take two point between lo and hi at eq-distance
+mid1 = lo+(hi-lo)/3;
+mid2 = hi-(hi-lo)/3;
+
+now, if(f(mid1) < f(mid2))
+		lo = mid1 //the lo-mid1 portion doesn't contain the answer.
+	 else
+		hi = mid2 //the mid2-hi portion doesn't contain the answer.
+		
+We can repeat the procedure for a few times(like 500 to 1000) to get a very
+close value of x where f(x) is a peak.
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1146
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=958552
