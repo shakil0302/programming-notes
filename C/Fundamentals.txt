@@ -1,0 +1,13 @@
+Rule of Sum:
+If a task can be done either in m ways or n ways. Then the task can be done in
+m+n ways.
+
+Problem: http://codeforces.com/contest/251/problem/A
+Submission: http://codeforces.com/contest/251/submission/24226965
+
+Rule of Product:
+If a task can be divided into two subtask and the subtask 1 can be done in m ways,
+the subtask 2 can be done in n ways, then the task can be done in mn ways.
+
+Problem: http://codeforces.com/contest/617/problem/B
+Submission: http://codeforces.com/contest/617/submission/24157451
