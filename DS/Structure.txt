@@ -1,0 +1,39 @@
+Built-in types like integer, double, char etc has a value. Sometimes we
+need to store more information than just a vlue for a single entity. In these
+case if the data are homogenious than array may help. But, if the data are not
+homogenious, then we need another data storing method.
+
+Most language provide an non-homogenious data storing method. In c and c++ we have
+structure. It helps us to reduce the complexity. It is useful to overload the operator '<' for a defined structure.
+
+Application area:
+Lets given name and birthdates, we have to print the name in the order of thier age.
+If two people was borned in the same day, then print in the order of their name.
+
+This is a place where managing data is a bit harder. Because two attributes belongs
+to a single object. So, we need to glue them together.
+
+struct Person {
+	string name;
+	int year, month, day;
+	bool operator<(const Person ot) const {
+		if(year == ot.year){
+			if(month == ot.month){
+				if(day == ot.day)
+					return name < ot.name;
+				else
+					return day < ot.day;
+			} else {
+				return month < ot.month;
+			}
+		} else {
+			return year < ot.year;
+		}
+	}
+
+
+Now, The problems become as trivial as sorting an array of integers. Defining a
+structure is a very powerful tool in the game of competetive programming.
+
+Problem: https://uva.onlinejudge.org/external/125/12541.pdf
+Submission: /src/uva12541.cpp
