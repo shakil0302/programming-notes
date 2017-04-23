@@ -28,5 +28,5 @@ Query for a[1:i]:
 1. res = identity of op.
 2. while(i)
 3.	res = op(res, bit[op])
-4. 	i -= i&-i
+4. 	i -= i&-i //which does the branch change
 5. return res
