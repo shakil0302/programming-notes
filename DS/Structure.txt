@@ -37,3 +37,6 @@ structure is a very powerful tool in the game of competetive programming.
 
 Problem: https://uva.onlinejudge.org/external/125/12541.pdf
 Submission: /src/uva12541.cpp
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1109
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=829795
