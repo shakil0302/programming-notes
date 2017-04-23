@@ -1,0 +1,32 @@
+BIT or Fenwick tree is a data structure which can answer cumulative operations
+over a array.
+
+Lets build an summation BIT over array a[] which is one indexed.
+Then, BIT can answer summation over a[1:i] in log n time. The preprocess takes
+O(n log n) time and O(n) memeory. BIT also supports update on a[i] in log n. The
+Summation has an beautiful property, a[i:j] can be written as a[1:j]-a[1:i-1],
+Thus BIT can answer range sum queries.
+
+Now, Lets build a minimum BIT over a[], then This BIT can answer minimum in a[1:i].
+But minimum in range can't be calculated from cumulative minimum, so, BIT can't
+queries like minimum in a[i:j].
+
+Implementation:
+BIT is 1 based array.
+lets a[] is an array on which we will build the BIT with operation op. Lets the
+bit array is bit[].
+Now,
+1. Initialize bit[] with identity element of op.
+2. For each entry a[i] as v
+3.	while(i <= MAX_I)
+4.		bit[i] = op(bit[i], v)
+5.		i += i&-i //which does the uplifiting on binary indexed tree.
+
+The 2-5 is also used for update if supported by operation op.
+
+Query for a[1:i]:
+1. res = identity of op.
+2. while(i)
+3.	res = op(res, bit[op])
+4. 	i -= i&-i
+5. return res
