@@ -8,15 +8,23 @@ S(m, n) denotes stirling numbers of second kind.
 
 1. Balls are distinct: TRUE, Boxes are distinct: TRUE, Container Can be Empty: TRUE
 	Solution: n^m
+
 2. Balls are distinct: TRUE, Boxes are distinct: TRUE, Container Can be Empty: FALSE
 	Solution: n!S(m, n)
+
 3. Balls are distinct: TRUE, Boxes are distinct: FALSE, Container Can be Empty: TRUE
 	Solution: for i = 1 to n, SUM: S(m, i)
+
 4. Balls are distinct: TRUE, Boxes are distinct: FALSE, Container Can be Empty: FALSE
 	Solution: S(m, n)
+
 5. Balls are distinct: FALSE, Boxes are distinct: TRUE, Container Can be Empty: TRUE
 	Solution: C(n+m-1, m)
+	Problem: http://lightoj.com/volume_showproblem.php?problem=1102
+	Submission: http://lightoj.com/volume_showcode.php?sub_id=954323
+
 6. Balls are distinct: FALSE, Boxes are distinct: TRUE, Container Can be Empty: TRUE
 	Solution: C(n+m-1, m)
+
 7. Balls are distinct: FALSE, Boxes are distinct: TRUE, Container Can be Empty: FALSE
 	Solution: C(m-1, n-1)
