@@ -1,0 +1,33 @@
+Centroid decomposition of a tree is a data structure that can be used to store path
+information and effectivly answer different tree queries.
+
+Centroid:
+A centroid of a tree is a node, removal of which results in a forest of trees where
+no resulting tree will contain n/2 nodes where n is the nodes in the original tree.
+
+Centroid Decomposition:
+Its a process to build a tree in another tree known as centriod tree.
+A centorid tree has a root which is centroid of the original tree. Then we remove the
+centroid from the tree which breaks the tree into forest of trees. Then we build the
+centroid tree of these subtrees and make them subtrees of the centroid.
+
+Algorithm:
+1. Pick a node v as root
+2. Calculate subtree size for each node rooted at v
+3. Find centroid of the tree using the subtree size information
+4. 	if v pass in centorid test take v as centorid
+5.	otherwise find the largest subtree of v as v, then, goto 4
+6. Mark v as centroid of the tree and for all subtree of v
+7.	goto 1 untill no subtree left.
+8.	for all subtree of the v, make v as parent of their centroid tree.
+
+Problem: http://codeforces.com/problemset/problem/321/C
+Submission: http://codeforces.com/contest/321/submission/26642222
+
+Properties of centroid tree:
+1. It contains all nodes of the original tree.
+2. The height of a centorid tree is at most log n
+3. Any path A -> B in the original tree can be break into A -> C + C -> B,
+	where C is the LCA(A, B) in the centroid tree. A node in a centroid tree store
+	information for path between the node and its ancestor. They are O(n log n).
+	Using this we answer any path query in the original tree.
