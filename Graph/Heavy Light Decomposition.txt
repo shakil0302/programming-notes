@@ -1,0 +1,28 @@
+In this technique, a tree is broken into different chains. For each chain we can build
+segtree/bit to answer queries within a chain in O(log n). Now HLD divides the tree
+in chain in such a way that, to find an answer from any node A to B, we need to change
+the chain at most O(log n) times. So, we can answer any query in O(log^2 n) time.
+
+ALgorithm:
+1. Let v be the root for this tree.
+2. Do a DFS to find all the subtree sizes rooted on v.
+3. Also, save parent information, which will be needed to change the chain
+4. Now Do HLD(v, 0);
+
+1. HLD(node, cid)
+2.		add node to chain with id cid.
+3. 		find z = largest subtree
+4.		HLD(z, cid)
+5.		for other subtrees as tz
+6.			HLD(tz, new_id)
+
+This correctly finds the heavy light decomposition of the trees.
+But usually we need to find some more information:
+1. given a chain, find the node with which it starts: chain_head
+2. given a chain, find its size: chain_size
+3. given a node, find the chain it belongs to: chain_id
+4. given a node, find its position in chain: chain_pos
+5. given a chain and a position, find the node at there: node_at
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1348
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=960375
