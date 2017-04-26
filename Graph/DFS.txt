@@ -1,0 +1,12 @@
+DFS is a graph search technique where we go deep and deep untill there is nowhere
+to go and then track back, and visit alternative paths.
+
+Algorithm:
+1. dfs(int nd)
+2.	set nd as visited
+3.	for all adjacent node as next
+4.		if(!visited next)
+5.			dfs(next)
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1012
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=829799
