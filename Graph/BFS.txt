@@ -1,0 +1,15 @@
+BFS is a graph search technique which visits the graph layer by layer.
+
+Algorithm:
+1. Set visited[] to false
+2. Take a unvisited as starting node if any remain, set as visited.
+3. push it to a queue q.
+4. while q has elements
+5.	take z = q.front and pop it out
+6.	for all adjacent nodes of z as next
+7.		set next as visited
+8.		add next to q
+9. goto 2
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1009
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=842577
