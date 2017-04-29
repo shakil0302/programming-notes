@@ -1,0 +1,16 @@
+Given n activies, each has a starting time Si and an ending time Ei. Find a subset
+of tasks which doesn't overlap with each other, and the chosen set is largest.
+
+The first thing we can think of about a greedy problem is to find a heuristic that
+may work.
+
+Lets analyze a few of them.
+1. Select the one which takes least amount of time.
+2. Selects the one which make least clashes with the remaining.
+3. Select the one which ends early.
+
+Only the third one works. It is instructive to find it out, why the other two doesn't
+work.
+
+Problem: http://www.spoj.com/problems/BUSYMAN/
+Submission: http://www.spoj.com/files/src/19316246/
