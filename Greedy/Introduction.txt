@@ -1,0 +1,8 @@
+The greedy is a very powerful technique to find a optimal solution to a problem.
+It is heuristic based approach. To solve a problem we first make a guess about greedy
+choice and try to prove it works. If it doesn't work, then some other may do. And there
+may not even a greedy solution exist. But when it does, It is usually the fastest solution
+that can solve the problem.
+
+Now, Often, finding the greedy solution is easier if the data is sorted in a certain
+property. So, we should always keep an eye on it.
