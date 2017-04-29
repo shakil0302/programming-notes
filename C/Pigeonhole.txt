@@ -1,0 +1,11 @@
+Pigeonhole Principle:
+This principle has many different variation. Here is two of them.
+
+1. If K+1 pigeon must go in K boxes, then at least a box contain at least 2 pigeons.
+2. If aK+1 pigeon must go in K boxes, then at least a box will contain
+at least a+1 pigeon.
+
+This principle is used to prove whether a arrangement is possible or not.
+
+Problem: http://codeforces.com/contest/746/problem/D
+Submission: http://codeforces.com/contest/746/submission/23096285
