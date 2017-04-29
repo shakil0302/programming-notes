@@ -1,0 +1,11 @@
+Let there is a set S with N elements. Now lets think we have k properties c1, c2, ...
+ck. To count elements in S which doesn't follow any of the property we can do the following,
+
+1. Let C = {c1, c2, ..., c2}
+2. For all subset of C as SC,
+3. 	If SC contain even number of elements
+4.		add the number of elemets which follow SC properties.
+5.	otherwise, subtract the number of elemets which follow SC properties.
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1117
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=930824
