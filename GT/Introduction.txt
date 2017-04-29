@@ -32,3 +32,6 @@ Lets analyze the situation.
 Now I think you got the idea. You can build larger states from smaller ones.
 So, a dp will find the answer. Sometimes a pattern will be found and we can use
 that to calculate the winning or losing staus for very large n.
+
+Problem: http://www.spoj.com/problems/MCOINS/
+Submission: http://www.spoj.com/files/src/19317151/
