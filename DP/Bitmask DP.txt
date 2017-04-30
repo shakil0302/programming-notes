@@ -1,0 +1,15 @@
+Bitmask DP is also known as DP over subsets. Sometimes we need to calculate in
+which order we need to choose some values to get the best result. The cost of
+choosing an item depends on the choice of the previous items. For this  reason
+we can find the optimal order by trying out all the possibility.
+
+Read subset search from search category.
+
+Now you know all the basics. So bitmask DP is not something very hard.
+Initially we set data[0] = solution for empty set, then from 1 to 2^n-1,
+we calculate the cost by improving the result from 1 element less sets.
+
+Finally in 2^n-1 all the items will exist, which will contain the solution.
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1037
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=928842
