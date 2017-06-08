@@ -16,12 +16,17 @@
 #include <map>
 using namespace std;
 //input
+#define ri(x) scanf("%d", &x);
+#define rll(x) scanf("%lld", &x);
+#define r64d(x) scanf("%I64d", &x);
 //debug
 //constants + types
 typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 //helper macros + algorithm
+#define rep(i,a,b) for(i=a; i<b; i++)
+#define per(i,a,b) for(i=b-1; i>=a; i--)
 #define all(x) (x).begin(),(x).end()
 #define sz(z) ((int)(x).size())
 //containers
