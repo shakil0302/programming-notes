@@ -2,6 +2,7 @@
     ** 1 second == 1/3600 hours.
 */
 #include <cstdio>
+#include <iostream>
 #include <cassert>
 #include <climits>
 #include <cstring>
@@ -26,12 +27,12 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 //helper macros + algorithm
 #define rep(i,a,b) for(i=a; i<b; i++)
-#define per(i,a,b) for(i=b-1; i>=a; i--)
+#define per(i,b,a) for(i=b; i>a; i--)
 #define all(x) (x).begin(),(x).end()
-#define sz(z) ((int)(x).size())
+#define sz(x) ((int)(x).size())
 //containers
 #define pb push_back
-#define mk make_pair
+#define mp make_pair
 #define fi first
 #define se second
 
