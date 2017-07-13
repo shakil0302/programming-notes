@@ -1,0 +1,15 @@
+This is a version of segment tree where each node contains a vector of elements
+which are fallen in the range in sorted order.
+
+This allow us to query in range with some additional requirement about the ordering
+relation of the values.
+
+1. How many elements are there in range [L, R] which is less then K
+2. Calculate sum of the elements which fall in the range [L, R] where K <= a[i] <= Z
+3. and many more...
+
+The idea is to build the tree as we do in merge sort. and using binary search to find
+the answers.
+
+Problem: http://www.spoj.com/problems/KQUERYO/
+Submission: http://www.spoj.com/files/src/19786752/

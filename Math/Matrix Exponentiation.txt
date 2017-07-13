@@ -1,0 +1,44 @@
+Solving linear recurrence can be broken to several steps.
+a) Representing the linear equation as a matrix.
+b) Finding the nth power of it.
+c) Applying this to a matrix which contain all the information of starting states.
+
+Say, the recurrence is in the form, a(n) = a(n-c1)+a(n-c2) where c1 and c2 are integers
+and c2 > c1. For this we need a c2xc2 sized matrix. Because at any time we need at
+least c2 states of information to go any further.
+
+Example: f(0) = 1, f(n) = f(n-1)+f(n-2)
+so, we need a 2x2 sized matrix. What is the best choice?
+To go to f(n) we need f(n-1) and f(n-2), so lets say we have a matrix
+......
+f(n-1)
+f(n-2)
+......
+We need a matrix which will transform it into(one step further)
+......
+f(n)
+f(n-1)
+......
+
+or,
+......
+f(n-1)+f(n-2)
+f(n-1)
+......
+
+its not hard to see that,
+......
+1 1
+1 0
+......
+do the job!.
+
+To get the nth power we can use logarithmic exponentiation. And, two matrix can be
+multiplied as it is defined.
+C = AB means
+Cij = sum_over_k Aik*Bkj
+
+So the complexity is o(c^3*log n)
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1096
+Solution: http://www.lightoj.com/volume_showcode.php?sub_id=852013
