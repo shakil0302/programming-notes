@@ -1,0 +1,11 @@
+The MO's algorithm works on continuous range of an array. So, This article
+is basically about how to transform an tree into array by leaving certain data
+in continous range.
+
+There is two way:
+1. DFS order traversal and size count: This will put the nodes of a subtree
+together. Helps to make certain subtree queries.
+
+2. DFS visit time decomposition: In this method, we can run a DFS in the tree which
+will add two additional information in each nodes. Start time and End time.
+This helps us to store path information as that will be in the continous range.
