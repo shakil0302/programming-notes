@@ -1,0 +1,11 @@
+The stl comes in two primary part:
+1. Containers
+2. Algorithms
+
+There are a few must knowing containers like vector, set, map, deque, queue,
+stack, priority_queue.
+
+Among the algorithm, learn sort.
+
+These are enough to solve many begineer level problems. For advanced problem, stl
+doesnt take you to far. Learn advanced DS as you encounteer.
