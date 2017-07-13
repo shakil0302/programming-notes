@@ -1,0 +1,14 @@
+Given an array "a" of size n and q queries of the form [i, j, k],
+How many element in the range a[i...j] which is less when k.
+
+This can be solved in offline using a range sum DS like bit or segment tree.
+The idea is to treat k like a time. We first calculate the value of query which
+have the least k value. First add all the array element which is less then the desired k
+in the RCT(range count tree). Now we can find the answer easily. Now add the remaining
+element from the array upto the next k. And so on.
+
+One thing that helps the processing is to sort the array and the query together.
+Then we can just traverse the array to simulate the process without thinking ok the time.
+
+Problem: http://www.spoj.com/problems/KQUERY/
+Solution: http://www.spoj.com/files/src/19788224/
