@@ -1,0 +1,15 @@
+Binary search tree is a binary tree where:
+1. Each node have at most two child: left, right.
+2. Each node at the left subtree is smaller in value than the root.
+3. Each node at the right subtree is greater in value than the root.
+
+This way BST is good to find if a item exists in list. Also, we can use the items
+as key and store some value with them. This makes a dictionary!
+
+STL have two implementation of BST:
+1. SET: for counting or checking existance of distinct elements
+2. MAP: for dictionary.
+
+But for harder problems these are not enough.
+We may need our own implementation. Some well known BST are,
+Splay Tree, RedBlack Tree and AVL tree.
