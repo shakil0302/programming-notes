@@ -1,0 +1,24 @@
+Given a tree T with n nodes, we need to answer some query regarding
+one or more subtree of the trees. This can be done using DSU on trees.
+
+The algorithm:
+0. let vec[maxn] is a array of pointer to vector<int>
+1. dfs(nd, p, isHeavy):
+2. let mx is the largest subtree of nd
+3. for each child v of nd other than mx:
+4.     dfs(v, nd, false)
+5. if(mx != -1):
+6.     dfs(mx, nd, true)
+7.     vec[nd] = vec[mx];
+8. else: vec[nd] = new vector<int>();
+9. Now add the nodes which are not in vec[nd] but should be, namely, the nd,
+	and all the vec[v] from the light subtrees. Also update the global information needed
+	to answer the query.
+10. Find the answer for this node.
+11. Now clean global information to exclude all the information added by this subtree,
+	namely vec[nd]
+	
+Problem: http://codeforces.com/contest/600/problem/E
+Solution: http://codeforces.com/contest/600/submission/28556788
+Problem: http://codeforces.com/contest/570/problem/D
+Solution: http://codeforces.com/contest/570/submission/28557625
