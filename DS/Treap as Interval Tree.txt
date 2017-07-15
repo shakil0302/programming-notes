@@ -1,0 +1,27 @@
+Lets think of an DS with the following operations,
+Lets a[1...n] be a sequence.
+1. Insert an element at position i.
+2. Delete an element from the position i.
+3. Split sequence a[1...n] into a[1...pos-1] and a[pos....n]
+4. Merge two sequence b[1...n1] and c[1...n2]  into a[1...n1, n1+1, ...n1+n2]
+5. Maintain an objective function and query it over any arbitrary interval.
+6. For range update, supports lazy propagation.
+
+That DS can be implemented using Treap. All the operations will be O(log n).
+
+The IDEA
+The idea is to use array indexes as key values in treap. Also, The keys won't be
+explicitly stored, instead they will be computed on the fly.
+
+As always, the split and merge function is the work horse for this too.
+1. Insert at i: split into a[1...i-1], a[i...n] then merge by putting the desired in
+the middle.
+2. Delete at i: Just as insert.
+3. Split: split by pos-1, what you get is this.
+4. Merge: The original merge works
+5. To query a[l...r], split into a[1....l-1], a[l...r], a[r+1...n]. Then the root
+of the middle one contains the result.
+6. Every node contains a info for lazy update that the range received.
+
+NB: Other interval trees have less constant factor. So, use it when you must.
+
