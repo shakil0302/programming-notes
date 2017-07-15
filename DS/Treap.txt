@@ -1,0 +1,22 @@
+Treap is a BBST that has a wide range of applocations.
+
+A minimal cartesian tree node holds
+1. A value
+2. A priority
+3. A left and a right pointer
+
+It has two basic functionality to aid others,
+1. split(T, x): divies the treap T into L and R where max(L) <= x and min(R) > x
+2. merge(L, R): it takes two treaps where max(L) < min(R) and combines them into one.
+
+With these two, other operations can be defined easily. Other needed operations can be,
+1. Insert
+2. Delete
+3. Kth value
+4. Cumulative Count
+
+A cartesian tree is called treap if the priority is assigned at random. This helps
+the tree to be has the height O(log n) approximately.
+
+Problem: http://www.spoj.com/problems/ORDERSET/en/
+Submission: http://www.spoj.com/files/src/19800870/
