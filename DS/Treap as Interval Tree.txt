@@ -25,3 +25,5 @@ of the middle one contains the result.
 
 NB: Other interval trees have less constant factor. So, use it when you must.
 
+Problem: http://www.spoj.com/problems/TREAP/
+Submission: http://www.spoj.com/files/src/19807415/

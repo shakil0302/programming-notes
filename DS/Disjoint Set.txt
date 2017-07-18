@@ -1,0 +1,17 @@
+Lets we have a graph with n nodes and no edges. Now we are given n queries.
+1. C u v: It tells are to connect u and v
+2. Q u v: It asks if there is a path between the nodes.
+
+This can be done using Disjoint Set, a very prowerful data structure. The concept is that
+each connected component has a super parent or root.
+
+1. Initially each node is its own super parent as they all are in different component.
+2. We we are told to connect two node, we connect their super parent only. Thus, two
+component will have only one super parent now.
+3. To query, we find both nodes super parent. If their is a path then their super
+parent will be same.
+4. To reduce the runtime, we need to keep the parent chain as low as possible. This is
+done by path compression.
+
+Problem: http://uva.onlinejudge.org/external/106/10608.pdf
+Submission: /src/uva10608.cpp

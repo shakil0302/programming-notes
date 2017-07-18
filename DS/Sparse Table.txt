@@ -1,0 +1,28 @@
+Sparse table has many interesting uses. We can calculate any additive property
+in O(log n) using this.
+
+Given an array a[] of size n and q queries [L, R], we need to answer min(a[L...R]).
+
+The idea is to store all the minimum of the form a[i...i+2^j-1] in st[j][i].
+Then it become easy to answer such query.
+
+Building the table: one interesting property is,
+1) st[i...i+2^0-1] = a[i]
+2) st[i...i+2^j-1] = min(st[i...i+2^(j-1)-1], st[k...k+2^(j-1)-1]);
+where k = i+2^(j-1). So, builing table can be done with two nested loop.
+in O(n log n) time and memory.
+
+Now the queries:
+We stored all the 2^i length ranges. So, we can answer [L, R] like this.
+for(j = max_log_n; j>=0; j--)
+	if(L+2^j-1 <= R){
+		//then [L, L+2^j-1] is in the answer.
+		answer = min(answer, st[j][L]);
+		L = L+2^j;
+	}
+	
+Other interesting uses includes finding LCA, range sum etc. As long as we can
+find a layers value from its previous layer, it works!
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1128
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=955889

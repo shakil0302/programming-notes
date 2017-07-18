@@ -1,0 +1,20 @@
+The trie is a prefix tree. We can store some wards and answer their diffent
+properties that depend on prefix and search words with some constraints applied.
+
+node {
+	int next[26];
+}
+
+Each node represent a char and links the next character in for a word. In this example,
+we are taking 26 lowercase character for example.
+
+Now, initially there are only the root node which does represent a dummy start
+character. Say, we want to store the word 'tree' there. What should we do?
+we go to root, and see if the character t is already exists. If now, we add it.
+Then we add 'ree' to that node.
+
+1. Can you search a word?
+2. Can you list all the words which has at most 1 dissimilarity?
+3. Can you list all the words which has the given prefix?
+
+Like I said, all the question regrading prefix can be answer by trie very easily.

@@ -1,0 +1,7 @@
+1. Given an array a[] of size n and q queries [L, R], print a[L]+a[L+1]+....+a[R].
+This can be solved using cumulative sum.
+
+2. Given an array a[] of size n, and p range updates [L, R, v] followed by q queries
+[L, R], a[L]+a[L+1]+....+a[R].
+This can also be done by cumulative sum. For all p queries do, b[L] += v and
+b[R+1] -= v. Then a[i] += b[1...i] will do the first kind of query.

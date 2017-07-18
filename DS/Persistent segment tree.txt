@@ -1,0 +1,23 @@
+Given an array a[] of integers and some updates [L, R, v] and queries [L, R, t]
+we need to print f([L, R]) after t'th update for each queries.
+
+What can we do it build a persistent segment tree, which stores all the version
+of itself.
+
+The idea:
+1. A tree is described by its root only. The other nodes are just connected with it.
+2. Every update changes only O(log n) nodes at most, including the root.
+
+So the idea is, whenever an update occurs, we store all the nodes that are updated.
+As the root will be always updated, the new tree will be linking the new updated node,
+and the other nodes that were not updated. So, essentially we have a new tree, but
+the existing nodes are reused and is unharmed.
+
+We can no longer use the implicit parent-child indexing. Left and Right child
+information will be stored.
+
+And we will allocate memory from a static array. Which will be at most q*log n times
+longer than required by usual segment tree.
+
+Problem: www.spoj.com/problems/DQUERY/
+Submission: 

@@ -1,0 +1,24 @@
+Given an array a[] of n numbers and q queries [L, R], we have to calculate some
+function f(a[L...R]).
+
+For most functions f, it can be done using segment tree more or less. It is one of
+the most popular interval trees.
+
+The idea is to build an tree which will contain information of several intervals
+[L, R]. The interval are chosen such a way that the query and update takes no more
+than O(log n) time.
+
+build(int nd, int s, int e){
+	if(s == e) tree[nd] = a[s];
+	int mid = (s+e)/2;
+	build(2*nd, s, mid);
+	build(2*nd+1, mid+1, e);
+	tree[nd] = tree[2*nd]+tree[2*nd+1];
+}
+
+Queries and updates are done in similar fashion.
+
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1082
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=833394
+Problem: http://www.lightoj.com/volume_showproblem.php?problem=1164
+Submission: http://www.lightoj.com/volume_showcode.php?sub_id=853196

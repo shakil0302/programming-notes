@@ -1,0 +1,26 @@
+Heap is a balanced binary tree. It can be used as priority queue.
+There are two kind of heaps.
+
+1. Max heap
+2. Min heap
+
+Here we will consider only max heap.
+1. The tree is complete.
+2. Parents value i greater than its childs.
+
+Now, given an array a[] of integers, how can we build an heap?
+1. Lets use implicit array indexes as tree edge.
+a) node at i has a left child at 2*i and right child at 2*i+1
+b) root is at 1
+Fill the tree with arbitrary numbers from array a[].
+
+Now, lets say we have a function max_heapify which takes an almost
+heap tree, and make it heap. By almost means, only the root is not in correct place.
+The other nodes follow the max heap property.
+
+Now, we can call this function from the lowest level of the tree to the roots. For all
+node which have at least one child(i.e except the leaf level).
+
+This will build the tree as max heap.
+
+Now insert and pop_top can be implemented easily, using this max_heapify function.
