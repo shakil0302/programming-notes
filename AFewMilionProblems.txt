@@ -1,0 +1,550 @@
+Combinatorics::Enumeration::FUNDAMENTAL:
+Given a set S of digits. How many numbers greater than X exists that uses each digit 
+of S only once.
+
+Combinatorics::Enumeration::EUCLIDEAN_PATH:
+How many paths exist from (x1, y1, z1) to (x2, y2, z2) in a euclidean space if we can
+move one unit in any axis in a single move.
+
+Combinatorics::Enumeration::DINNER_TABLE:
+In how many ways can n people be arranged about a circular table?
+
+Combinatorics::Enumeration::ON_BYTES:
+How many bytes contain (a) exactly x l's;(b) at least x l's?
+
+Combinatorics::Enumeration::OVERCOUNTING:
+In how many way n cards can be taken such that there is at least one club from a deck.
+
+Combinatorics::Enumeration::MULTINOMIAL_COEFFICIENT:
+Determine the coefficient of x1^n1*x2^n2*...*xr^nr in (a1*x1^m1+a2*x2^m2+...+ar*xr^mr)^n
+
+Combinatorics::Enumeration::INTEGER_SOLUTION:
+Determine the number of integer solution of x1+x2+...+xr < n where xi >= ai
+
+Combinatorics::Enumeration::MULTINOMIAL_DISTINCT_TERMS:
+How many distinct terms exists in the expansion of (a1*x1^m1+a2*x2^m2+...+ar*xr^mr)^n
+
+Combinatorics::Enumeration::INTERGER_COMPOSITION:
+Given n, m, k be positive integers with n = mk. How many compositions of n have
+each summand a multiple of k?
+
+Combinatorics::Enumeration::RUN:
+A coin is tossed n times. How many ways k runs occur.
+
+Combinatorics::Enumeration::PARENTHESIZE:
+In how many ways can one parenthesize the product of n terms?
+
+Combinatorics::Enumeration::CHOCOLATE_DISTRIBUTION:
+In how many ways n chocolate can be distributed among k people?
+
+Combinatorics::Enumeration::LOTTERY_GROUPING:
+In how many ways n lottery can be grouped?
+
+Combinatorics::Enumeration::LOTTERY_DISTRIBUTION:
+In how many ways n lottery can be distributed among k people?
+
+Combinatorics::Enumeration::BOUNDED_INTEGER_SOLUTION:
+Given x1+x2+...+xr = n, how many integer solution exists if p <= xi <= z?
+
+Combinatorics::Enumeration::THIRTEEN_CARDS:
+If 13 cards are dealt from a standard deck of 52,
+what is the probability that these 13 cards include
+(a) at least k card from each suit? 
+(b)exactly k void?
+
+Combinatorics::Enumeration::DERANGEMENT:
+In how many ways can the integers n distinct integers be rearranged in a line
+so that no even integer is in its natural position?
+
+Combinatorics::Enumeration::WEDDING_SEATING:
+Given two set A and B, how many one-to-one function exists from A to B,
+such that f(ai) != bi for some(possibly many) pairs of (ai, bi).
+
+Combinatorics::Enumeration::RIVAL_GROUPING:
+Given a permutation of size n, how many way we can select x of them such that
+no two are neighbour.
+
+Combinatorics::Enumeration::DIE_SUM:
+If a fair die is rolled n times, what is the probability that
+the sum of the rolls is x?
+
+Combinatorics::Enumeration::GENERALIZED_INTEGER_SOLUTION:
+How many integer solutions exists for a1*x1+a2*x2+....+ar*xr = n?
+
+Combinatorics::Enumeration::FLAG_SIGNAL:
+A ship contains 4n flags with n for each red, white, blue and black colors.
+a) How many of these signals use an even number of blue flags and
+an odd number of black flags?
+b) How many of the signals have at least x white flags or no white flags at all?
+
+Combinatorics::Enumeration::CIRCLE:
+In how many ways can n people be arranged around a circular table if two arrangements
+are considered equivalent when one can be obtained from the other by means of a clockwise
+rotation through i*360/n for 0 <= i < n?
+
+Combinatorics::Enumeration::SQUARE_COLORING:
+In how many ways can the vertices of a square be 3-colored, if the square can be moved
+about in three dimensions?
+
+Combinatorics::Enumeration::STACK_PERMUTATION:
+Suppose that the integers 1, 2, ..., n are permuted using stack.
+a) How many permutation are possible?
+b) How many permutation have ai in position pi(possible multiple such)?
+c) How many permutations start with abc?
+
+Combinatorics::Existance::DISTINCT_SUM:
+Let S be a set of six positive integers whose maximum is at most 14. Is there exist any
+such S such that sum of their subsets are distinct?
+
+Combinatorics::Optimization::ARC_COVERING:
+An arc (i, j) is said to "cover" nodes i and j. What is the smallest possible
+subset of arcs that can be chosen, such that each node of G is covered by at
+least one arc of the subset?
+
+Combinatorics::Optimization::ARC_COLORING:
+It is desired to paint the arcs of G various colors, subject to the constraint
+that not all the arcs in any cycle are painted the same color. What is the
+smallest number of colors that will suffice?
+
+Combinatorics::Optimization::MIN_CUT:
+It is desired to find a subset of arcs (a "cut") such that when these arcs are
+removed from G, the graph becomes disconnected. For what subset of arcs
+is the sum of the arc lengths minimized?
+
+Combinatorics::Optimization::SPANNING_TREE:
+It is desired to find a subset of arcs such that when these arcs are removed
+from G, the graph remains connected. For what subset of arcs is the sum of the
+arc lengths maximized?
+
+Combinatorics::Optimization::SHORTEST_PATH:
+What is the shortest path between two specified nodes of G?
+
+Combinatorics::Optimization::CHINESE_POSTMAN:
+It is desired to find a tour (a closed path) that passes through each arc in
+G at least once. What is the shortest such tour?
+
+Combinatorics::Optimization::ASSIGNMENT:
+An  nxn matrix W is given. It is desired to find a subset of the
+elements in  W, with exactly one element in each row and in each column.
+For what subset is the sum of the elements minimized?
+
+Combinatorics::Optimization::MACHINE_SEQUENCING:
+A number of jobs are to be processed by a machine. For each job a processing
+time and a deadline are specified. How should the jobs be sequenced, so
+that the number of late jobs is minimized?
+
+Combinatorics::Optimization::TWENTY_QUESTIONS:
+Consider the following game, not unlike the parlor game of Twenty Questions.
+One player chooses a "target" object from a known set of n objects.
+The probability that he chooses object i is pi. These probabilities are known
+to the second player, who is to identify the target object by formulating a
+series of questions of the form, "Is the target contained in subset S of the
+objects? for some specified S. Assuming the first player answers these "yes
+or no” questions truthfully, how can the second player minimize the mean
+number of questions he must ask?
+
+Combinatorics::Optimization::RESTRICTED_SATISFIABILITY:
+A Boolean expression is given, in conjunctive normal form (i.e.. “product-of-sums”
+form), with at most two literals in each term (sum) of the expression.
+For what assignment of 0, 1 values to the variables does the expression take
+on a "maximum" value? (The expression is satisfiable if and only if there is
+an assignment for which the expression takes on the value 1.)
+
+Stringology::RANGE_MINIMUM:
+Given an array a[] of n integers. Find min in range a[i]...a[j]. If these operations
+are also allowed.
+1) No update
+2) Update a[i]
+3) Add v in range a[i] to a[j]
+4) Replace a[i] to a[j] with v.
+
+Stringology::BIT_MANIPULATION:
+Given a binary string, find the state of the ith bit if one can toggle, set or reset
+a range of bits.
+
+Stringology::HISTOGRAM:
+Given an array a[] of n integers. Find the range [i, j] such that (j-i+1)*min(a[i], a[j])
+is maximum.
+
+Stringology::FIXED_RANGED_MINIMUM:
+Given an array a[] of n integers. Find minimum in range a[i] and a[i+d] for all choices
+of i where d is a given constant.
+
+Stringology::RANGE_MINIMUM_HISTORY:
+Given an array a[] of n integers. Find the minimum value that ever occured in
+range a[i] to a[j] if range updates(add, replace) are allowed.
+
+Stringology::KTH_MINIMUM:
+Given an array a[] of n integers. Find the kth minimum number where we can add/delete
+any number in the array.
+
+Stringology::TOTAL_IN_RANGE:
+Given an array a[] of n integers. Find the sum of a[i...j] if the operations allowed are
+1) No update
+2) Update a[i]
+3) Add v in range a[i] to a[j]
+4) Replace a[i] to a[j] with v.
+5) Delete the ith number
+6) Insert x between a[i] and a[i+1]
+
+Stringology::DISTINCT_INTEGERS:
+Given an array a[] of n integers, find the number of distinct integers in range a[i...j]
+
+Stringology::NUMBER_INDEX:
+Given an array a[] of n integers, how many numbers are less than x in range a[i...j]
+
+Stringology::MAXISUM_SUMARRAY_SUM:
+Given an array a[] of n integers, what is the maximum subarray sum in range a[i...j]
+
+Stringology::SUM_OF_AND:
+Given an array a[] of n integers, what is the sum of AND of all subsets in range a[i...j]
+
+Stringology::ARITHMETIC_PROGRESSION_UPDATE:
+Given an array a[] of n integers, find the sum in range a[i..j] if,
+update on a[i..j] by x+iy means a[i] += x, a[i+d] = x+dy upto a[j]
+
+Stringology::NEEDLE_IN_HAYSTACK:
+Given two non-empty strings A and B, Find the number of times B
+occurs as a substring of A.
+
+Stringology::HAYSTACK_CONTAINS_NEEDLES:
+Given a string T and n queries each with a string Pi, find the number of times Pi
+occurs as a substring of T.
+
+Stringology::LOG_FACTOR:
+Given a string find the smallest string which several concatenation results
+in this string.
+
+Stringology::REGEX_MATCHING:
+Given a text and a pattern that contains ? and * with meaning as regex, Find all the
+matches of the pattern in the text.
+
+Stringology::LONGEST_COMMON_SUBSEQUECE:
+Given two non-empty strings A and B, Find the longest string that occurs as
+subsequence of both strings.
+
+Stringology::EDIT_DISTANCE:
+Given two strings A and B, find the minimum edit operations required to transform A
+into B.
+
+Stringology::DISTINCT_SUBWORD:
+Given a text, find the number of distince substring of that text.
+
+Stringology::TWO_DIMENTIONAL_PATTERN_MATCHING:
+Given a n x n matrix, find the occurences of pattern m x m.
+
+Stringology::SUPERSTRING:
+Given n strings, find the smallest string that contains all the strings.
+
+Stringology::PALINDROME_COUNT:
+Given an string str, find the number of substrings in range str[i...j] which are
+palindromes.
+
+Stringology::DISTINCT_PALINDROME:
+Given a string str, find the number of distinct palindromic substring of str.
+
+Geometry::CLOCKWISE_SORT:
+Given a set the of vertices of a convex polygon, find a sorted ordering of them
+in clockwise order.
+
+Geometry::POINT_DIRECTION:
+Given points p, q, r. Determine where r lies in left or right of pq line.
+
+Geometry::CONVEX_HULL_OF_POINTS:
+Given a set of points(d dimentional)(integer or floats), find the convex hull of them.
+
+Geometry::ONLINE_CONVEX_HULL_OF_POINTS:
+Given n points, find their convex hull. Update the hull on,
+1) Delete point p.
+2) Add point p.
+
+Geometry::CONVEX_HULL_OF_LINE_SEGMENT:
+Given a set of line segments, find their convex hull.
+
+Geometry::CONVEX_HULL_OF_POLYGON:
+Given a non-convex ploygon, find the convex hull of it.
+
+Geometry::CONVEX_HULL_OF_CONVEX_HULLS:
+Given two convex hull, find their convex hull.
+
+Geometry::CONVEX_HULL_OF_UNIT_CIRCLE:
+Given a set of unit circles, find their convex hull.
+
+Geometry::CONVEX_HULL_OF_CIRCLE:
+Given a set of circles, find their convex hull.
+
+Geometry:INTERSECTION_DETECTION:
+Given a set S of n closed segments in the plane, find whether is a intersection
+between any two line segments.
+
+Geometry:LINE_SEGMENT_INTERSECTION
+Given a set S of n closed segments in the plane, find all intersection points
+among the segments in S.
+
+Geometry:RED_BLUE_LINE_SEGMENT_INTERSECTION
+Given a set R of red line segments and a set B of blue line segments, where same
+color segments doesnt intersect, find all intersection points
+among the segments.
+
+Geometry:LINE_SEGMENT_INTERSECTION_COUNT
+Given a set S of n closed segments in the plane, count all intersection points
+among the segments in S.
+
+Geometry:CURVE_INTERSECTION
+Given a set S of n closed curve in the plane, find all intersection points
+among the curves in S.
+
+Geometry::POINT_IN_SECTION:
+Given a set of n non intersecting lines bounded by y = [0, 1], find in which division
+a point falls.
+
+Geometry::CIRCLE_INTERSECTION:
+Given a set S of n circles, find all intersection points among the circles.
+
+Geometry::POINT_OUTSIDE_OF_TRIANGLE:
+Given a set S of n triangles, find all the points that are outside of the triangles.
+
+Geometry::POINT_VISION:
+Given a set S of line segments and a point p. Find the line segments that
+is visible from the point p.
+
+Geometry::SUBDIVISION_OVERLEY:
+Given two subdivision, find their overlay.
+
+Geometry::BOOLEAN_OPERATIONS_ON_POLYGON:
+Given two polygon, find their,
+1. Intersection
+2. Union
+3. Difference
+
+Geometry::MONOTONIC_POLYGON:
+Given a polygon P and a line L, find whether P is monotonic with respect to L.
+
+Geometry::TRIANGULATION_OF_POLYGON:
+Given a polygon P, find its triangulation.
+
+Geometry::TETRAHEDRAL_DECOMPOSITION:
+Decompose a given polytope into non-overlapping tetrahedra.
+
+Geometry::THE_ART_GALLERY_PROBLEM:
+Given a triangulated polygon, find a three coloring of its vertices.
+
+Geometry::TRIANGULATION_OF_POINTS:
+Given a set of points S, find its triangulation.
+
+Geometry::POINT_VISION_IN_POLYGON:
+Given a polygon P and a point q, find the area of the polygon that is visible form q.
+
+Geometry::HALF_SPACE_INTERSECTION:
+Given a set of half-spaces(1, 2, ..., d dimentional), find a point in their common
+intersection or decide that the common intersection is empty.
+
+Geometry::SMALLEST_ENCLOSING_DISC:
+Given a set P of n points in the plane find the smallest enclosing disc for P.
+
+Geometry::STAR_SHAPED_POLYGON:
+A simple polygon P is called star-shaped if it contains a point q such
+that for any point p in P the line segment pq is contained in P. Give
+an algorithm whose expected running time is linear to decide whether a
+simple polygon is star-shaped.
+
+Geometry::TRAIN_LEAD:
+Given n parallel train lines and the starting positions k1, k2, ..., kn
+of n trains in them with their speed v1, v2, ..., vn, find all the leading trains along
+with their leading start time.
+
+Geometry::ORTHOGONAL_RANGE_SEARCH:
+Given n d-dimensitional points, find all the points between a and b.
+
+Geometry::ORTHOGONAL_EXACT_MATCH:
+Given n d-dimensitional points, find if a point a exists.
+
+Geometry::ORTHOGONAL_PARTIAL_MATCH:
+Given n d-dimensitional points and information about x <= d co-ordinates, find all
+the points that matches these informations.
+
+Geometry::ORTHOGONAL_RANGE_COUNT:
+Given n d-dimensitional points, find the number of points between a and b.
+
+Geometry::ORTHOGONAL_PARTIAL_MATCH_COUNT:
+Given n d-dimensitional points and information about x <= d co-ordinates, find
+the number of points that matches these informations.
+
+Geometry::ORTHOGONAL_RANGE_SEARCH_FOR_POLYGON:
+Given n polygons(or axis parallel rectangles) find all the polygons that are in
+the query rectangle.
+
+Geometry::PLANAR_POINT_LOCATION:
+Given a planar subdivision S and a point p, find which face contains P.
+
+Geometry::SPHERICAL_POINT_LOCATION:
+Given a spherical subdivision S and a point p, find which face contains P.
+
+Geometry::CLOSEST_POINT_PAIR:
+Given a set of points P, find the closest two points.
+
+Geometry::ALL_PAIR_CLOSEST_POINT:
+Given a set of points P, find the closest point for each points.
+
+Geometry::VORONOI_DIAGRAM:
+Given a set of points P(d dimensional) and a distance function and a order-k(partition
+will be done according to the kth closest point, two special cases are k=1 and k=n-1),
+find the voronoi diagram of them.
+
+Geometry::VORONOI_DIAGRAM_OF_LINES:
+Given a set of lines L, find the voronoi diagram of them.
+
+Geometry::VORONOI_DIAGRAM_RECONSTRUCTION:
+Given a convex planar subdivision, find the sites for which, the subdivision is
+a voronoi diagram if any exists.
+
+Geometry::HALF_PLANE_DISCREPANCY:
+Find the half-plane discrepancy of a set S of n points in the unit square.
+
+Geometry::LINE_ARRANGEMENT:
+Given n lines L, find their arrangement.
+
+Geometry::POINTS_ABOVE_LINE:
+Given n points, for each line l connecting two points, find the number of points
+above l.
+
+Geometry::LINES_POINTS_INTERSECTION:
+Given a set of points S and a set of lines L, determine whether there is a points in S
+which lies on a line on L.
+
+Geometry::POINT_SEPARATOR:
+Given a set of blue points and a set of red points, find whether there is a line
+which separates them.
+
+Geometry::HULL_VERTEX:
+Given a set of points P and a point q among them, find whether q is a vertex of the
+convex hull of P.
+
+Geometry::MAX_LEVEL_OF_LINE_ARRANGEMENT:
+Given a set L of n lines in the plane, compute the maximum level of any vertex
+in the arrangement A(L).
+
+Geometry::MAXIMUM_POINT_CONTAINER_LINE:
+Given a set of points, find the line which contains maximum numbers of points.
+
+Geometry::LINE_SEGMENTS_INTERSECTION:
+Given a set of line segments S, find how many of them are intersected by l.
+
+Geometry::STABBER_DETECTION:
+Given a set of lines(what if all are vertical), find if there is a line which
+intersect them all.
+
+Geometry::EUCLIDEAN_MINIMUM_SPANNING_TREE:
+Given a set of points, find its euclidean minimum spanning tree.
+
+Geometry::APPROXIMATE_TSP:
+Given a set of points, find an approximate tsp tour which is at most twice as long as
+the optimal one.
+
+Geometry::GABRIEL_GRAPH:
+Given a set of points, find its gabriel graph. Two points are connected if
+the circle with diameter pq which contains both p and q points doesnt contain any
+other points.
+
+Geometry::RELATIVE_NEIGHBORHOOD_GRAPH:
+Given a set of points P, find its neighborhood graph. Two points p and q are connected if
+dist(p, q) <= min { max(d(p, r), d(q, r)) } for each r belongs to P other than p and q.
+
+Geometry::MAXIMUM_DISTANCE_K_CLUSTER:
+Given a set of points, find k cluster of it where the minimum distance between clusters
+are maximized. The distance between cluster Pi and Pj is dist(Pi, Pj) = min{dist(p, q)}
+where p and q are points from Pi and Pj.
+
+Geometry::HORIZONAL_VERTICAL_SEGMENT_INTERSECTION:
+Given a set of horizontal lines, find the set of lines that intersect a vertical line.
+
+Geometry::STABBING_QUERY:
+Given a set of intervals(d dimensional), report/count all the intervals that contain
+a given point/interval.
+
+Geometry::INTERVAL_RANGE_SEARCH:
+Given a set of intervals, find all the intervals within a given interval.
+
+Geometry::WINDOW_QUERY:
+Given a set of objects, find the objects that have a common point with a orthogonal
+query rectangles.
+
+Geometry::LINE_RAY_INTERSECTION:
+Given a set of lines and a point p, find the lines which intesect with the vertical
+ray going from point p to infinity upwards.
+
+Geometry::BSP_TREES:
+Given a set of objects(d dimensional), find a BSP tree for these objects.
+
+Geometry::HIDDEN_SURFACE_REMOVAL:
+Given a BSP tree, and a point p, draw the visible surface from that point.
+
+Geometry::LOCATION_QUERY:
+Given a planar subdivision, find the faces that intersect a given point/interval/
+orthogonal rectangles.
+
+Geometry::POINT_ROBOT_MOTION_PLAN:
+Given a set of obstacles, find a path from point p to q.
+
+Geometry::MINKOWSKI_SUM:
+Given two ploygon p and q, find p (+) q, that is p's minkowski sum with q.
+
+Geometry::TRANSLATIONAL_ROBOT_MOTION_PLAN:
+Given a convex robot and n polygons(obstacles), find a path from p to q
+if it can make only translational move.
+
+Geometry::ROBOT_MOTION_PLAN:
+Given a convex robot and n polygons(obstacles), find a path from p to q
+if it can make both translation and rotation.
+
+Geometry::ROBOT_MOTION_PLAN:
+Given a robot with d degree of freedom, and n obstacles, find a path from p to q.
+
+Geometry::2^d_TREE
+Let P be a set of point in d-dimensional space. Describe an algorithm to
+construct an 2^dtree on P.
+
+Geometry::SHORTEST_ROBOT_MOTION:
+Given a robot and set of obstacles, find the shortest path from point p to q.
+
+Geometry::TRIANGULAR_RANGE_SEARCH:
+Given a set S of n points in the plane, count the points from S lying in a
+query triangle t.
+
+Geometry::STABBING_TRIANGLES_COUNT:
+Given n triangles in the plane. Count the number of triangles from T containing a query
+point q.
+
+Search::Backtracking::N_QUEEN:
+Given a nxn chess board, how many ways exist to place m queen such that no queen is
+attacked by another.
+
+Search::Backtracking::KNIGHTS_TOUR:
+Given a nxn chessboard, a knight is placed at a1, find a path for the knight that
+visits all the squares of the board exactly once.
+
+Search::IDA*::15_PUZZLE:
+Given a 15 puzzle, find a solution of it.
+
+Search::DancingLink::SUDOKU:
+Given a sudoku puzzle, find a solution for it.
+
+Search::BinarySearch::POLYNOMIAL_ROOTS:
+Given a polynomial, find all of its real roots.
+
+Search::TernarySearch::SAME_HEIGHT_BUILDING:
+Given n buildings, each of different height,
+with each building having a cost for adding or removing a brick,
+find the minimum cost to make all the buildings have the same height.
+
+Search::MeetInTheMiddle::4SUM:
+Given an array of n integers, how many way four of them can be selected such that
+their sum is 0. An integers can be choosed multiple times.
+
+Search::HillClimb::FURTHEST_POINT:
+Given n points, find the distance of two furthest points.
+
+Search::CSP::CRYPTOGRAPHY::
+Given three words a, b, c, replace each letter with a digit such that the equation
+a+b=c is satisfied.
+

@@ -1,0 +1,12 @@
+For unweighted matching we can use the Hopcroft-Karp bipartite matching.
+
+The basic idea is:
+1. init matching to null
+2. repeat
+3.     using bfs find all augmenting path from a to b where staring and ending
+       nodes are free vertex.
+4.     augment all vertex disjoint path to matching
+5. until no more augmentng path is possible.
+
+Problem: http://www.spoj.com/problems/MATCHING/
+Solution: http://www.spoj.com/files/src/20520145/
