@@ -1,0 +1,154 @@
+Rules:
+1. Each game is played between Left and Right.
+2. Each state is defined with a position and a turn.
+3. Each position is represented using P = {pL | pR} where pL is
+the available options for Left and pR is for right in this position.
+4. Each game will terminate.
+5. Each game has a starting position.
+6. Normally, Who fails to move loses.
+
+Examples:
+0 = {} is the simplest game known as Endgame.
+1 = {0 | }
+-1 = { | 0}
+* = {0 | 0} also known as fuzzy.
+
+Winner:
+Case 1. G > 0: Left wins.
+Case 2. G < 0: Right wins.
+Case 3. G = 0: Second player wins.
+Case 4. G || 0, First player wins.
+
+Negative of a Game:
+-G = {-gR | -gL}
+
+Sum of Games:
+When games G and H are played simultanously,
+their outcome is their disjunctive sum G + H.
+
+Game Controted Fraction
+1. A typical postion has several numbers in boxes.
+2. Each turn player can alter one of these number.
+3. The denominator of the new number must be strictly less.
+4. If the number is an integer, the new number must have less absolute value.
+5. Irrational number have infinite denominator.
+6. Left can decrease the number and right can increase the number.
+
+Example:
+[2/5] = {[1/3] | [1/2]}
+This game has the value 3/8 as it is the simplest number between 1/3 and 1/2.
+
+General Solution
+Let x = [a; b c d... n+1], then
+[x] = a.0^(b-1)1^c0^d... where the fractional part is binary string.
+
+HackenBush Restrained
+1. Played on pictures containing black and white edges.
+2. Each node must be connected to the ground, otherwise the are removed.
+3. Two nodes may be connected with edges. Loops are allowed.
+4. Left can chop black edges and Right can chop white edges.
+
+COL and SNORT
+1. Both are map coloring game.
+2. Left paint with black and Right with white.
+3. Two adjacent country can't have same color on COL and
+different color on snort.
+
+The game can be analyzed with Duel graph of the map.
+
+NUMBER and GAMES
+Solution strategy
+1. Analyze simple position 0, 1/2, 1, *, etc
+2. Find pattern and general theorem.
+3. This way a complete theory can be discovered.
+
+Short Game
+Short game is one which has only finitely many positions in all.
+
+Value of a game
+WHOM_TO_TURN(GAME_ID) is a way to represent a game value along with turn.
+
+L(G) = MAX R(gL) = L and
+R(G) = MIN L(gR) = R
+If L < R then it is a number. Otherwise, The game is less then
+all value greater than L and greater than all value less then R.
+and confused between L and R.
+
+Example
+{5 | 4, 7}
+So, L(G) = R(5) and R(G) = L(4)
+So, G <= 5, G >= 4 and confused between 4 and 5.
+
+All small game
+A game is all small if all of its stopping position is zero. ex, {0 | {0 | -2}}
+
+Impartial Game
+The game G is impartial if and only if for every position P = {L | R}, we have L = R
+From now impartial game will be written as P = {L} and R is assumed.
+
+Nim Game
+1. Played with heaps of matchsticks.
+2. The legal move is to decrease any number of matchsticks in a heap.
+Clearly Nim is a impartial game.
+
+If we write position P = *n for a heap size of n, then
+*n = {*m} where m < n.
+
+Bogus Nim
+If we allow increasing the matchstick, then the outcome doesn't changes.
+As, we can just decrease that amount if we were in winning position.
+
+Grundy Theorem
+Each short impartial game is equavalent to play some NIM heap.
+If G = {A, B, C,...}, and A, B, C is equavalent to play of heap sized a, b, c,...,
+then, G is equavalent to heap with size of smallest non-negative number that is
+not present in a, b, c, ... also known as mex of this array.
+
+Example
+Let G = {A, B, C} and where A is equavalent to 2, B to 0 and C to 3,
+then G is equavalent to 1 as this is the smallest non-negative number not in there.
+
+OCTAL GAME class:
+A octal game is represented with A1,A2,... where Ak < 8
+Rules:
+1. Played with several heaps of stones.
+For each Ak, we have some constraints.
+a) We can remove k stones form the pile. if,
+b) The pile is divided into i pices where the ith bit is 1 of Ak
+
+Example:
+333......
+We got infinite number of threes. So, We can remove any number of stones.
+3 = 2^0+2^1, So, we can take stones such that the pile no longer exist (2^0 case),
+or the pile exist(2^1).
+
+77
+We got two 7's. So, we can take only one stone or two.
+7 = 2^0+2^1+2^2, We can remove these stone such that the pile is divided
+into 0, 1 or two pices after the removal.
+
+165
+Case 1: The first number is 1 = 2^0
+So, we can remove 1 stone, if there is only one stone in that pile. Because,
+we need to make it empty(2^0)
+
+Case 2: The second number is 6 = 2^1+2^2
+So, we can remove 2 stone if there are more than two stone, because we are not
+allowed to make it empty(no 2^0). We can however take two stone in such a that
+the pile is broken in two pices or, leave as one pile.
+
+Case 3: The third number is 5 = 2^0+2^2
+Well, Take three piece from middle. No three move if 4 stones are left.
+
+Misere Rule
+The last player able to move is loser.
+
+Misere NIM:
+If we are leaving at least one 2 or bigger sized pile, play normal nim. Otherwise,
+leave odd number of one's.
+
+Misere Grundy value:
+Unless G is an endgame, find mex. Otherwise the grundy value is 1(in normal case
+it would be zero).
+
+More on: On Games and Numbers.

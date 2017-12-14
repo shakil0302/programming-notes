@@ -243,10 +243,6 @@ palindromes.
 Stringology::DISTINCT_PALINDROME:
 Given a string str, find the number of distinct palindromic substring of str.
 
-Geometry::CLOCKWISE_SORT:
-Given a set the of vertices of a convex polygon, find a sorted ordering of them
-in clockwise order.
-
 Geometry::POINT_DIRECTION:
 Given points p, q, r. Determine where r lies in left or right of pq line.
 

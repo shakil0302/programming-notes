@@ -12,4 +12,4 @@ STL have two implementation of BST:
 
 But for harder problems these are not enough.
 We may need our own implementation. Some well known BST are,
-Splay Tree, RedBlack Tree and AVL tree.
+Treap, Splay Tree, RedBlack Tree and AVL tree.

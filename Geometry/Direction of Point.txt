@@ -1,0 +1,8 @@
+Given a line segment AB and a point P, find whether the point P lies on
+left, right or inline with AB.
+
+1. Take A as reference point.
+2. Take Br and Pr as the point B and P with respect to reference
+3. If Br X Pr < 0 then it lies left
+4. If Br X Pr > 0 then it lies right
+5. Otherwise it is inline.

@@ -1,15 +1,20 @@
+Gift Wrapping aka Jarvis March
+========================================
 Convex Hull of a set of points can be found in different ways. The brute
 force ways takes O(n^2) times and no additional memory.
 
 Finding the hull
 1. Take the leftmost point(in case of tie, take topmost for tiebreak)
 2. This point will surely be in the hull.
-3. Now, take any other usused points as candidate.
+3. Now, take any other usused points as candidate c.
 4. For each unused point p,
 5.		if last-c-p makes a left turn
 6. 			set c = p
 7. Now, this is the next point in the hull.
 8. This should be run till we back at start.
+
+NB: If we need to take least/most amount of points on hull,
+we need to take care on step 5.
 
 Problem: WF 2011: Trash Removal
 Solution: /src/TrashRemoval.cpp
