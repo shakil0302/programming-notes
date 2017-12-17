@@ -1,0 +1,62 @@
+Intro
+===========
+Peoples are unable to accept randomness. We give meaning to every shapes.
+We underestimate the share of randomness in about everything. In many cases luck
+is preceived as non-luck(skill). Probability theory is the science of randomness.
+
+It does not matter how frequently something succeeds if failure is too costly to bear.
+What is given by godness fortuna, can be taken away by her.
+
+People higher in rank in the social pecking order forces us to make the worst mistake,
+they rises the unwillingness to accept the randomness. But we need to understand the
+luck involved.
+
+Lucky idiots do not look like lucky idiots and they do not know that they belong to
+such category. They will act as if they deserved the success. An increase in personal
+performance (regardless of whether it is caused deterministically or by the agency
+of lady Fortuna) induces a rise of serotonin in  the  subject,
+itself  causing  an  increase  of  what  is  commonly  called  leadership  ability.
+
+Accounting
+==============
+One cannot judge a performance in any given field by the results, but by the costs
+of the alternatives. There is always a generator(RNG) which controls what actually
+happend. Without understanding the generator, we can't analyze the merit of a
+decision.
+
+The problem is, In most generator the event that causes disaster is a rare event.
+Thus it is not visible to the naked eye. Which is called the black swan problem.
+Even though history warns us about what happend to our seniors, we deny them as that
+won't occur to us. Which is known as denigration of history. We see the wealth being
+generated, never the processor, a matter that makes people lose sight of their risks. 
+
+But the so called businesswise people are the greatest fool of randomness. And most
+of the time they will be your boss. That is something to beware about mature
+financial instituitions. They will face the rare event someday too. The remedy to
+either play politics with these people or not ot argue with them.
+
+Monte Carlo
+===============
+We need to learn from history. Because history repeats itself. For past history,
+we can read various complex situation in the past and find alternative outcome from
+there. To make history we can use Monte Carlo engine which can be used to analyze
+any stochastic process. It is possible to verify most ideas with a good monte
+carlo engine.
+
+To avoid emotional attachment we should evaluate performance less frequently.
+Because of randomness, we see more ups and downs there and its hard to differentiate
+between noise and signal. It is better to see summarized view on data rather than
+watching each record on live.
+
+Financial Statistics
+======================
+When using statistics, one should be careful because, we still may not care about
+the rare event. Statistician often eliminate extreme cases(outlier) when calculating
+mean which only should be done when they do not cause problem. But If a company loses
+all its capital, its over.
+
+We see the only the successful people. This is known as survivorship bias. This is why
+most of the data we can find is flawed.
+
+Always look for bias in the data! There maybe hidden biases. And a biased data
+cant be trusted for any reason.
